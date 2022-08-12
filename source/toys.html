@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Toys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@200;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body>
+
+    @@include('blocks/header.html')
+
+    <main>
+        <h1 class="container title-wrapper">TOY FOR KIDS</h1>
+        <div class="breadcrumbs container">
+            <a class="breadcrumbs-next" href="index.html">Home</a>
+            <a class="breadcrumbs-next" href="catalog.html">Catalog</a>
+            <p class="breadcrumbs-disable">Toys</p>
+        </div>
+        <section class="options">
+            <h2 class="hidden">Options</h2>
+            <div class="option container">
+                <div class="cost">
+                    <p class="title-options-cost">Cost</p>
+                    <div class="range-left"></div>
+                    <div class="range"></div>
+                    <div class="range-right"></div>
+                    <div>
+                        <span class="cost-numbers-one">0</span>
+                        <span class="cost-numbers-two">500</span>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend class="title-options">Color</legend>
+                    <ul class="undotted">
+                        <li class="color-options">
+                            <input type="checkbox" id="input-black" class="checkbox-input" checked>
+                            <label for="input-black" class="checkbox-label">Black</label>
+                        <li class="color-options">
+                            <input type="checkbox" id="input-blue" class="checkbox-input">
+                            <label for="input-blue" class="checkbox-label">Blue</label>
+                        </li>
+                        <li class="color-options">
+                            <input type="checkbox" id="input-green" class="checkbox-input">
+                            <label for="input-green" class="checkbox-label">Green</label>
+                        </li>
+                        <li class="color-options">
+                            <input type="checkbox" id="input-white" class="checkbox-input">
+                            <label for="input-white" class="checkbox-label">White</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend class="title-options">Delivery</legend>
+                    <ul class="undotted">
+                        <li class="delivery-options">
+                            <input type="radio" id="input-Free-shipping" name="delivery" class="radio-input">
+                            <label for="input-Free-shipping" class="radio-label">Free shipping</label>
+                        </li>
+                        <li class="delivery-options">
+                            <input type="radio" id="input-Fast-shipping" name="delivery" class="radio-input" checked>
+                            <label for="input-Fast-shipping" class="radio-label">Fast shipping</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend class="title-options">Amount</legend>
+                    <ul class="amount-row undotted">
+                        <li class="amount-options">
+                            <input type="radio" id="input-0-5" name="amount" class="radio-amount-input" checked>
+                            <label for="input-0-5" class="radio-amount-label">0-5</label>
+                        </li>
+                        <li class="amount-options">
+                            <input type="radio" id="input-10-20" name="amount" class="radio-amount-input">
+                            <label for="input-10-20" class="radio-amount-label">10-20</label>
+                        </li>
+                        <li class="amount-options">
+                            <input type="radio" id="input-20-50" name="amount" class="radio-amount-input">
+                            <label for="input-20-50" class="radio-amount-label">20-50</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <div class="options-button">
+                    <button class="button" type="submit">apply</button>
+                </div>
+            </div>
+        </section>
+        <section class="product container">
+            <h2 class="hidden">Products</h2>
+            <ul class="undotted product-list">
+                @@include('blocks/products-list.html', {
+                    "link": "#",
+                    "img": "img/toys1.png",
+                    "text": "SHARKY BEAN BAG CHAIR COVER",
+                    "price": "$60.00 USD"
+                })
+                @@include('blocks/products-list.html', {
+                    "link": "#",
+                    "img": "img/toys2.png",
+                    "text": "BRASS DECO FRAMES",
+                    "price": "$66.00 USD"
+                })
+                @@include('blocks/products-list.html', {
+                    "link": "#",
+                    "img": "img/toys3.png",
+                    "text": "CIBO FULL APRON",
+                    "price": "$60.00 USD"
+                })
+                @@include('blocks/products-list.html', {
+                    "link": "#",
+                    "img": "img/toys4.png",
+                    "text": "GATCHA GATCHA GUMBALL MACHINE",
+                    "price": "$56.00 USD"
+                })
+                @@include('blocks/products-list.html', {
+                    "link": "#",
+                    "img": "img/toys5.png",
+                    "text": "CHRISTMAS ADVENT SCENTED CANDLE",
+                    "price": "$29.00 USD"
+                })
+                @@include('blocks/products-list.html', {
+                    "link": "#",
+                    "img": "img/toys6.png",
+                    "text": "TANGLE SPINNING TEA LIGHT",
+                    "price": "$56.00 USD"
+                })
+            </ul>
+            <div class="pagination container">
+                <a href="#" class="pagination-back"></a>
+                <div class="pages">
+                    <ul class="pages-list undotted">
+                        <li>
+                            <a href="toys.html" class="first-active">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="pagination-next"></a>
+            </div>
+        </section>
+    </main>
+    
+@@include('blocks/footer.html')
+
+</body>
+
+</html>

@@ -1,60 +1,566 @@
-@import "_variables.base";
+@import "_base";
 @import "_mixins";
-
-/*
-  Import vendor libraries
-*/
+@import "_utils";
+@import "_variables.base";
 @import "vendor/_normalize";
 
-/*
-  Import utils classes and base styles
-*/
-@import "_utils";
-@import "_base";
+// IMPORT BLOCKS
 
-/*
-  Import all other blocks
-*/
-@import "_blocks/container";
+@import "_blocks/header";
 @import "_blocks/footer";
+@import "_blocks/services-list";
+@import "_blocks/services-list-catalog";
+@import "_blocks/info-blog";
+@import "_blocks/products-list";
 
-/*
-  Ниже пример подключения других блоков
 
-  Каждый новый файл должен отвечать за конкретный блок в терминах БЭМ
-  (https://ru.bem.info/methodology/key-concepts/#%D0%B1%D0%BB%D0%BE%D0%BA)
+/* BANNER */
 
-  Для именования селекторов давайте придерживаться стиля two dashes
-  (https://ru.bem.info/methodology/naming-convention/#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-two-dashes)
-  block-name__element-name--modificator
-*/
+.banner {
+  position: relative;
+  background: #EEE4DB;
+  padding: 89px 0px;
+  margin-top: 129px;
+}
 
-/*
-  Код ниже нужно удалить, он добавлен просто для примера
-  Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
-  то он должен был бы быть в файле _blocks/coming-soon.scss
-*/
+.banner-wrapper {
+  margin-left: 133px;
+}
 
-.coming-soon {
-  color: $color-text;
+.banner img {
+  position: absolute;
+  top: -89px;
+  right: 100px;
+}
+
+.banner-title {
+  font-family: 'Montserrat', 'Gill Sans', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 110%;
+  color: #1E0606;
+  margin: 0px;
+  width: 30%;
+}
+
+.banner-text {
+  font-family: 'Crimson Text', 'Gill Sans', serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #1E0606;
+}
+
+.text {
+  font-family: 'Open Sans', 'Gill Sans', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  height: 39px;
+  background: #C29974;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 0px;
+  margin: 0px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  width: 1180px;
+}
+
+.numbers {
+  position: absolute;
+  font-family: 'Montserrat', 'Gill Sans', sans-serif;
+  font-weight: 200;
+  font-size: 60px;
+  line-height: 73px;
+  opacity: 5%;
+  top: 17px;
+  left: 28px;
+}
+
+.stick {
+  color: #D6CAC2;
+  position: absolute;
+  top: 101px;
+  left: 31px;
+}
+
+.stick-1 {
+  width: 31px;
+  height: 3px;
+  background: #725F5B;
+  margin-bottom: 11px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.stick-2 {
+  width: 31px;
+  height: 3px;
+  background: #D6CAC2;
+  margin-bottom: 11px;
+  border: none;
+  cursor: pointer;
+}
+
+.stick button {
+  display: block;
+}
+
+
+
+.arrow-info {
+  display: flex;
+  margin-top: 33px;
+}
+
+.button-arrow {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.products-info {
+  width: 580px;
+  margin: 0px;
+}
+
+/* SECTION DELIVERY */
+
+.delivery-info {
+  display: flex;
+  margin-top: 90px;
+}
+
+.delivery-info img {
+  background: #7D97DA33;
+}
+
+.delivery-list {
+  font-family: 'Crimson Text', 'Gill Sans', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 34px;
+  color: #1E0606;
+  margin-top: -5px;
+  margin-bottom: 44px;
+}
+
+.delivery-list a {
+  background: #70BBDC33;
+  padding: 11px 180px 11px 60px;
+  margin-left: -60px;
+  font-weight: 700;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.delivery-list p {
+  margin-bottom: -12px;
+}
+
+.block-info-delivery {
+  margin-left: 121px;
+  margin-bottom: 10px;
+}
+
+.info-delivery-text {
+  width: 480px;
+  margin-bottom: 15px;
+}
+
+.header-delivery {
+  font-family: 'Montserrat', 'Gill Sans', sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  margin-bottom: 17px
+}
+
+.delivery-info .button {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* LOGO */  
+
+.awards {
+  margin-top: 85px;
+}
+
+.awards img {
+  background: #7D97DA33;
+}
+
+.awards-list {
+  display: flex;
+  width: 1180px;
+  justify-content: space-between;
+}
+
+/* ARTICLE */
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 152px;
+
+}
+
+.info-block {
+  background: #E1F0F7;
+  padding: 0px 30px 30px;
+  width: 543px;
+  margin-top: 104px;
+}
+
+.info-block:first-child {
+  margin-right: 57px;
+}
+
+
+.info-title {
+  font-family: 'Montserrat', 'Gill Sans', sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  text-transform: uppercase;
+  color: #1E0606;
+  margin: -20px 0px 10px;
+}
+
+.subtitle {
+  font-family: 'Crimson Text', 'Gill Sans', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 34px;
+  color: #1E0606;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.info-text {
+  margin: 10px 0px 20px;
+}
+
+.info-text-second {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.info-img {
+  margin-bottom: -159px;
+  border: none;
+}
+
+/* POPUP */
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(125, 151, 218, 0.8);
+  z-index: 1;
+  padding: 113px 360px;
+  display: none;
+}
+
+.popup-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-close {
+  border: none;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  right: -30px;
+
+}
+
+.popup-form {
+  width: 680px;
+  background: #E5EAF8;
+  padding: 42px 40px;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+// BLOG
+
+
+
+.pagination {
+  margin-top: 28px;
+  margin-bottom: 53px;
+}
+
+/* HOVER */
+
+.title-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+
+
+
+// TOYS
+
+/* OPTIONS */
+
+.options {
+  background: #7D97DA33;
+  width: 100%;
+  padding: 40px 0px 30px;
+}
+
+.option {
+  display: flex;
+  max-width: auto;
+}
+
+.option fieldset:nth-child(1) {
+  margin-right: 108px;
+}
+
+.option fieldset:nth-child(2) {
+  margin-right: 118px;
+}
+
+.option fieldset:nth-child(3) {
+  margin-right: 68px;
+}
+
+.option fieldset:nth-child(4) {
+  margin-right: 60px;
+}
+
+.title-options {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.title-options-cost {
+  font-weight: 700;
+}
+
+.color-options {
+  margin-bottom: 15px;
+}
+
+.delivery-options {
+  margin-bottom: 10px;
+}
+
+/* RANGE */
+
+.cost {
+  position: relative;
+  margin-right: 261px;
+  margin-top: 0px;
+  top: -19px;
+  left: 0px;
+  height: 22px;
+}
+
+.range-left {
+  width: 34px;
+  height: 4px;
+  background: #C29974;
+  margin-top: 24px;
+  margin-left: 5px;
+}
+
+.range {
+  width: 24px;
+  height: 24px;
+  background: url(../img/range.png) no-repeat;
+  position: absolute;
+  top: 52px;
+  left: 39px;
+}
+
+.range-right {
+  width: 130px;
+  height: 4px;
+  background: #000000;
+  opacity: 0.5;
+  position: absolute;
+  top: 62px;
+  left: 62px;
+}
+
+.cost-numbers-one {
+  position: absolute;
+  top: 82px;
+  left: 0px;
+}
+
+.cost-numbers-two {
+  position: absolute;
+  top: 82px;
+  left: 179px;
+}
+
+
+/* RADIO */
+
+.radio-label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 31px;
+}
+
+.radio-label::before,
+.radio-label::after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+.radio-label::before {
+  width: 16px;
+  height: 16px;
+  top: 0px;
+  left: 0px;
+  border: 2px solid #C29974;
+  border-radius: 360px;
+}
+
+.radio-label::after {
+  font-size: 14px;
+  line-height: 14px;
+  top: 4px;
+  left: 4px;
+  opacity: 0;
+  content: url(../img/dot.png);
+  color: #C29974;
+}
+
+.radio-input:checked+.radio-label:after {
+  opacity: 1;
+}
+
+.radio-input:disabled+.radio-label,
+.radio-input:disabled+.radio-label:before {
+  opacity: .5;
+}
+/* RADIO AMOUNT */
+
+.amount-row {
+  display: flex;
+}
+
+.radio-amount-label {
+  cursor: pointer;
+  content: '';
+  width: 80px;
+  height: 38px;
+  display: flex;
   justify-content: center;
   text-align: center;
-  min-height: calc(100vh - 100px);
-  margin: auto;
-  padding: 0 5vw;
+  align-items: center;
+  background: #fff;
+}
 
-  &__title {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 25vw;
-    font-weight: 400;
-    margin: 0 auto;
-    text-transform: uppercase;
-    width: 100%;
-  }
+.radio-amount-label::before,
+.radio-amount-label::after {
+  content: '';
+  position: absolute;
+  display: block;
+
+}
+
+.options-button {
+  margin-top: 37px;
+}
+
+input[type=radio]:checked+.radio-amount-label {
+  background: #F3D0DB;
+}
+
+
+
+// CATALOG
+
+
+
+
+.product-title {
+  font-family: 'Montserrat', 'Gill Sans', sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  text-transform: uppercase;
+  color: #1E0606;
+  margin: 35px 604px 25px 200px;
+  width: 486px;
+}
+
+.product-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1E0606;
+  margin: 0px 410px 15px 200px;
+  width: 680px;
+}
+
+.product-last {
+  margin-bottom: 55px;
+}
+
+
+
+// CONTACT
+
+
+.contact-form {
+  width: 680px;
+  background: #E5EAF8;
+  margin: 0px;
+  margin-bottom: 60px;
+  padding: 42px 40px;
+}
+
+.contact-text {
+  padding-top: 0px;
+  padding-left: 120px;
+}
+
+.contact-text p {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-title {
+  Font-family: 'Montserrat', 'Gill Sans', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #C29974;
 }

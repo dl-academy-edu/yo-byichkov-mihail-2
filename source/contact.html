@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Contact</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body>
+
+	@@include('blocks/header.html')
+
+	<main class="container">
+		<section>
+			<h1 class="contact-title title-wrapper">Contact Us</h1>
+			<div class="breadcrumbs container">
+				<a class="breadcrumbs-next" href="index.html">Home</a>
+				<p class="breadcrumbs-disable">Contact Us</p>
+			</div>
+			<div class="contact-info">
+				<form action="#" class="contact-form">
+					<div class="label-wrapper">
+						<label for="input-name">Name</label>
+						<input type="text" id="input-name" class="" placeholder="Ivan Ivanov">
+					</div>
+
+					<div class="field-2-column">
+						<div class="label-wrapper">
+							<label for="input-phone">Phone</label>
+							<input type="text" id="input-phone">
+						</div>
+
+						<div class="label-wrapper">
+							<label for="input-email">E-mail</label>
+							<input type="text" id="input-email">
+						</div>
+					</div>
+					<div class="label-wrapper">
+						<label for="textarea">Message</label>
+						<textarea id="textarea" cols="60" rows="15"></textarea>
+					</div>
+					<div class="label-wrapper contact-list">
+						<input type="checkbox" id="input-cash" class="checkbox-input" checked>
+						<label for="input-cash" class="checkbox-label">By clicking on the button, you consent to the
+							processing of your personal
+							data</label>
+					</div>
+					<button class="button" type="submit">submit</button>
+				</form>
+				<div class="contact-text">
+					<p>Our support team are on-hand to assist with any issues you are experiencing.</p>
+					<p>Please use the form to contact us with your needs. Send us a message and we'll respond as soon as
+						possible.
+					</p>
+					<p class="text-title">An expert is waiting to help you!</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	@@include('blocks/footer.html')
+
+</body>
+
+</html>
