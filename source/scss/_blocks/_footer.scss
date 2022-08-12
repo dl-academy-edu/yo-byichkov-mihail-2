@@ -1,0 +1,120 @@
+/* FOOTER */
+
+.footer {
+    background: #434343;
+    width: 100%;
+  }
+  
+  .footer-row {
+    display: flex;
+    max-width: auto;
+    padding-top: 85px;
+  }
+  
+  .footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  .footer-title {
+    color: #AAAAAA;
+    font-size: 16px;
+    line-height: 21px;
+    height: 45px;
+    border-bottom: 1px solid #666666;
+    width: 380px;
+    margin-bottom: 28px;
+  }
+  
+  .footer-menu {
+    margin-right: 20px;
+  }
+  
+  .footer-content li {
+    margin-top: 15px;
+  }
+  
+  .footer-content a {
+    padding-bottom: 15px;
+  }
+  
+  .inline li {
+    display: inline;
+    margin-right: 0px;
+    padding-right: 10px;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    border-top: 1px solid #666666;
+    margin-top: 28px;
+    line-height: 22px;
+    margin-right: auto;
+    padding-top: 0px;
+    padding-bottom: 90px;
+    width: 100%;
+  }
+  
+  
+  .footer-bottom p {
+    color: #FFFFFF;
+    margin-top: 23px;
+  }
+  
+  .footer-bottom a {
+    color: #A2A2A2;
+    margin-left: 110px;
+    margin-top: 23px;
+  }
+  
+  .footer-form {
+    display: flex;
+    max-width: 380px;
+  }
+  
+  .rating-area {
+    overflow: hidden;
+    margin: 26px 155px 0px 25px;
+  }
+  
+  .rating-area:not(:checked)>input {
+    display: none;
+  }
+  
+  .rating-area:not(:checked)>label {
+    float: right;
+    width: 20px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 16px;
+    color: white;
+  
+  }
+  
+  .rating-area:not(:checked)>label:before {
+    content: '★';
+  }
+  
+  .rating-area>input:checked~label {
+    color: #C29974;
+  
+  }
+  
+  .rating-area:not(:checked)>label:hover,
+  .rating-area:not(:checked)>label:hover~label {
+    color: #836E5B;
+  }
+  
+  .rating-area>input:checked+label:hover,
+  .rating-area>input:checked+label:hover~label,
+  .rating-area>input:checked~label:hover,
+  .rating-area>input:checked~label:hover~label,
+  .rating-area>label:hover~input:checked~label {
+    color: #C29974;
+  
+  }
+  
+  .rate-area>label:active {
+    position: relative;
+  }
