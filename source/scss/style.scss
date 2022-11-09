@@ -11,6 +11,7 @@
 @import "_blocks/services-list-catalog";
 @import "_blocks/info-blog";
 @import "_blocks/products-list";
+@import "_blocks/animation";
 
 
 /* BANNER */
@@ -31,8 +32,6 @@
 .banner-wrapper {
   margin-left: 133px;
 }
-
-
 
 .banner-title {
   font-family: 'Montserrat', 'Gill Sans', sans-serif;
@@ -578,30 +577,11 @@ input[type=radio]:checked+.radio-amount-label {
   color: #C29974;
 }
 
-
-// ANIMATION 
-
-.clouds {
-  margin-top: 10px;
-}
-
-.city {
-  max-width: 1180px;
-}
-
-.color-lamp {
-  position: absolute;
-  top: 436px;
-  left: 1026px;
-  z-index: 4;
-}
-
 // SVG ANIMATION
 
 .svg {
   margin-bottom: 60px;
 }
-
 
 // GRID
 
