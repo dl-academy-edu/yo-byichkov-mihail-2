@@ -1,95 +1,50 @@
 /* КАРТОЧКИ ТОВАРА */
 
 .product {
-    margin-top: 60px;
-  }
-  
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .product-list .product-card img {
-    background: white;
-  }
-  
-  .product-list a {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .product-card {
-    width: 380px;
-    height: 497px;
-    display: inline-block;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: -22px;
-  }
-  
-  .product-card p {
-    font-size: 14px;
-    line-height: 19px;
-    color: #1E0606;
-    margin-top: 25px;
-  }
-  
-  .product-card span {
-    font-weight: 700;
-  }
-  
-  .product .product-card {
-    position: relative;
-  }
-  
-  .product .product-card a {
+  margin-top: 60px;
+
+  & .product-card a {
     display: block;
     align-items: center;
     text-align: center;
   }
-  
-  .info-hover {
-    display: flex;
-    position: absolute;
-    background-color: rgba(229, 234, 248, .9);
-    top: 89px;
-    left: 87px;
-    width: 207px;
-    height: 207px;
-    overflow: hidden;
-    text-transform: uppercase;
-    opacity: 0;
+
+  & .product-card {
+    position: relative;
   }
-  
-  .info-hover span {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 29px;
+
+  & li:hover .info-hover {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  & .product-card img {
+    background: white;
+  }
+
+  & a {
     display: flex;
-    text-align: center;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 82px;
-    text-transform: uppercase;
-    color: #1E0606;
-  
   }
-  
-  .product-list .product-card span {
+
+  & .product-card span {
     font-weight: 700;
     color: #1E0606;
   }
-  
-  .product-list .product-card p {
+
+  & .product-card p {
     font-size: 14px;
     line-height: 19px;
   }
-  
-  .product-list .product-card .learn-more {
+
+  & .product-card .learn-more {
     font-family: 'Montserrat''Gill Sans', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -101,14 +56,62 @@
     text-transform: uppercase;
     color: #1E0606;
   }
-  
-  .product li:hover .info-hover {
-    display: block;
-    opacity: 1;
-  
+
+  & .product-card:nth-child(4n+4),
+  & .product-card:nth-child(5n+5),
+  & .product-card:nth-child(6n+6) {
+    margin-top: 40px;
   }
-  
-  .info-hover:active {
+}
+
+.product-card {
+  width: 380px;
+  height: 497px;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: -22px;
+
+  & p {
+    font-size: 14px;
+    line-height: 19px;
+    color: #1E0606;
+    margin-top: 25px;
+  }
+
+  & span {
+    font-weight: 700;
+  }
+}
+
+.info-hover {
+  display: flex;
+  position: absolute;
+  background-color: rgba(229, 234, 248, .9);
+  top: 89px;
+  left: 87px;
+  width: 207px;
+  height: 207px;
+  overflow: hidden;
+  text-transform: uppercase;
+  opacity: 0;
+
+  & span {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 29px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 82px;
+    text-transform: uppercase;
+    color: #1E0606;
+  }
+
+  &:active {
     display: flex;
     position: absolute;
     background-color: rgba(229, 234, 248, .67);
@@ -120,9 +123,4 @@
     text-transform: uppercase;
     opacity: 0;
   }
-  
-  .product-list .product-card:nth-child(4n+4),
-  .product-list .product-card:nth-child(5n+5),
-  .product-list .product-card:nth-child(6n+6) {
-    margin-top: 40px;
-  }
+}
