@@ -1,103 +1,70 @@
 /* КАРТОЧКИ ТОВАРА */
 
 .product {
-  margin-top: 60px;
-
-  & .product-card a {
-    display: block;
-    align-items: center;
-    text-align: center;
+    margin-top: 60px;
   }
-
-  & .product-card {
-    position: relative;
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-
-  & li:hover .info-hover {
-    display: block;
-    opacity: 1;
-  }
-}
-
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  & .product-card img {
+  
+  .product-list .product-card img {
     background: white;
   }
-
-  & a {
+  
+  .product-list a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-
-  & .product-card span {
-    font-weight: 700;
-    color: #1E0606;
-  }
-
-  & .product-card p {
-    font-size: 14px;
-    line-height: 19px;
-  }
-
-  & .product-card .learn-more {
-    font-family: 'Montserrat''Gill Sans', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 29px;
+  
+  .product-card {
+    width: 380px;
+    height: 497px;
     display: inline-block;
-    text-align: center;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    color: #1E0606;
+    text-align: center;
+    margin-bottom: -22px;
   }
-
-  & .product-card:nth-child(4n+4),
-  & .product-card:nth-child(5n+5),
-  & .product-card:nth-child(6n+6) {
-    margin-top: 40px;
-  }
-}
-
-.product-card {
-  width: 380px;
-  height: 497px;
-  display: inline-block;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: -22px;
-
-  & p {
+  
+  .product-card p {
     font-size: 14px;
     line-height: 19px;
     color: #1E0606;
     margin-top: 25px;
   }
-
-  & span {
+  
+  .product-card span {
     font-weight: 700;
   }
-}
-
-.info-hover {
-  display: flex;
-  position: absolute;
-  background-color: rgba(229, 234, 248, .9);
-  top: 89px;
-  left: 87px;
-  width: 207px;
-  height: 207px;
-  overflow: hidden;
-  text-transform: uppercase;
-  opacity: 0;
-
-  & span {
+  
+  .product .product-card {
+    position: relative;
+  }
+  
+  .product .product-card a {
+    display: block;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .info-hover {
+    display: flex;
+    position: absolute;
+    background-color: rgba(229, 234, 248, .9);
+    top: 89px;
+    left: 87px;
+    width: 207px;
+    height: 207px;
+    overflow: hidden;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+  
+  .info-hover span {
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 26px;
@@ -109,9 +76,39 @@
     margin-top: 82px;
     text-transform: uppercase;
     color: #1E0606;
+  
   }
-
-  &:active {
+  
+  .product-list .product-card span {
+    font-weight: 700;
+    color: #1E0606;
+  }
+  
+  .product-list .product-card p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  
+  .product-list .product-card .learn-more {
+    font-family: 'Montserrat''Gill Sans', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 29px;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #1E0606;
+  }
+  
+  .product li:hover .info-hover {
+    display: block;
+    opacity: 1;
+  
+  }
+  
+  .info-hover:active {
     display: flex;
     position: absolute;
     background-color: rgba(229, 234, 248, .67);
@@ -123,4 +120,9 @@
     text-transform: uppercase;
     opacity: 0;
   }
-}
+  
+  .product-list .product-card:nth-child(4n+4),
+  .product-list .product-card:nth-child(5n+5),
+  .product-list .product-card:nth-child(6n+6) {
+    margin-top: 40px;
+  }

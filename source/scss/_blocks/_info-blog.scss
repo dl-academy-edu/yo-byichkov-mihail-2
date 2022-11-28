@@ -30,17 +30,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    & img {
-      background: #7D97DA33;
-    }
-
-    & .blog-card:nth-child(4n+4),
-    & .blog-card:nth-child(5n+5),
-    & .blog-card:nth-child(6n+6) {
-      margin-top: 15px;
-    }
   }
   
-
+  .info-blog img {
+    background: #7D97DA33;
+  }
   
+  .info-blog .blog-card:nth-child(4n+4),
+  .info-blog .blog-card:nth-child(5n+5),
+  .info-blog .blog-card:nth-child(6n+6) {
+    margin-top: 15px;
+  }
